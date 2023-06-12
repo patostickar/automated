@@ -1,0 +1,88 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="index.js" type="NodeJSConfigurationType" path-to-node="$PROJECT_DIR$/.devbox/virtenv/.wrappers/bin/node" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="PATH" value="$PROJECT_DIR$/.devbox/virtenv/.wrappers/bin:$PROJECT_DIR$/.devbox/nix/profile/default/bin:/nix/store/pq0wg047vb278g1pfvzlczbd2xkk9nrq-patchelf-0.15.0/bin:/nix/store/b5mkki8bysygaf7a01jpj88zrxibkrv4-gcc-wrapper-12.2.0/bin:/nix/store/dj5anrpwcn0p6h3xnqyr5mz30fc7l825-gcc-12.2.0/bin:/nix/store/yvis74nnab0s8pcbyyb0k6glbbjm7viz-glibc-2.37-8-bin/bin:/nix/store/arq10xrdh6yw3hgxils68cnjm0yr756a-coreutils-9.1/bin:/nix/store/0kh9lkqqjpwflxfvb4a1ngxnkcfnlspd-binutils-wrapper-2.40/bin:/nix/store/ybw485608d7f1yv1v071j2052q64mvla-binutils-2.40/bin:/nix/store/13qc0xyjz7rmxnsn2rn1wzk16z2xw2nl-nodejs-20.0.0/bin:/nix/store/z3cm9p8lm6fvmlibk1j9sjnkc7d1dvcr-findutils-4.9.0/bin:/nix/store/sl6zlsp2lrxhnxbdyw35f0fcd4v292m7-diffutils-3.9/bin:/nix/store/2zlcqkdihanvpj0awajvg9807icbvgs4-gnused-4.9/bin:/nix/store/4sd4qx367yqczyrwfvr0p7cd0p5357sf-gnugrep-3.7/bin:/nix/store/v2cz8lfk06cp08xppcx8cg4pfknfawpp-gawk-5.2.1/bin:/nix/store/vmnjcdp4zhn3kfl258f6w1fcbcfxfamd-gnutar-1.34/bin:/nix/store/3zb0ycd9vmjk7lhs1smg1n2dr76bvxj9-gzip-1.12/bin:/nix/store/3fknda5iv4vqh44rqifwc5pw6pz108dn-bzip2-1.0.8-bin/bin:/nix/store/03vys33ya5y7a7nkwgzywaazivcwhc4m-gnumake-4.4.1/bin:/nix/store/j80wcbm6bb1nsqsgmniq43rg980p27q9-bash-5.2-p15/bin:/nix/store/nyb1ylh7yziay33syl2m0mw8nxl01dwr-patch-2.7.6/bin:/nix/store/a2176r9fbwn3y6nv9jxn0q0b4mz0gzz1-xz-5.4.2-bin/bin:/nix/store/q8ppgz92hmj684l0bz7mhdm33q1qzz3z-file-5.44/bin:$USER_HOME$/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$USER_HOME$/.local/share/JetBrains/Toolbox/scripts" />
+      <env name="outputs" value="out" />
+      <env name="CXX" value="g++" />
+      <env name="__DEVBOX_SHELLENV_HASH_b5b01e33bb2eb1f89767bb094aa4521da078622e3bc3c660bc02a857b3f84dc1" value="ee5113be95b82a6b0738bf67f69ff07d68fbe1bf52949584fa1fb258220056d8" />
+      <env name="XDG_DATA_DIRS" value="/nix/store/pq0wg047vb278g1pfvzlczbd2xkk9nrq-patchelf-0.15.0/share:/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop" />
+      <env name="depsBuildTarget" value="" />
+      <env name="buildInputs" value="/nix/store/13qc0xyjz7rmxnsn2rn1wzk16z2xw2nl-nodejs-20.0.0" />
+      <env name="doCheck" value="" />
+      <env name="NIX_PROFILES" value="/nix/var/nix/profiles/default $USER_HOME$/.nix-profile" />
+      <env name="strictDeps" value="" />
+      <env name="LAUNCHER_PATH" value="/usr/local/bin/devbox" />
+      <env name="OBJCOPY" value="objcopy" />
+      <env name="STATUS" value="WORKING_NICELY" />
+      <env name="OBJDUMP" value="objdump" />
+      <env name="LD_LIBRARY_PATH" value="$PROJECT_DIR$/.devbox/nix/profile/default/lib:" />
+      <env name="READELF" value="readelf" />
+      <env name="depsHostHostPropagated" value="" />
+      <env name="nativeBuildInputs" value="" />
+      <env name="shellHook" value="" />
+      <env name="depsTargetTargetPropagated" value="" />
+      <env name="RANLIB" value="ranlib" />
+      <env name="__ETC_PROFILE_NIX_SOURCED" value="1" />
+      <env name="stdenv" value="/nix/store/pgf87rgkzdbqhhsddpligy8xiwar63w8-stdenv-linux" />
+      <env name="SIZE" value="size" />
+      <env name="doInstallCheck" value="" />
+      <env name="patches" value="" />
+      <env name="DEVBOX_OG_PATH_b5b01e33bb2eb1f89767bb094aa4521da078622e3bc3c660bc02a857b3f84dc1" value="$USER_HOME$/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$USER_HOME$/.local/share/JetBrains/Toolbox/scripts" />
+      <env name="DIRENV_DIFF" value="eJzsWGlv4zjS_iuC3vfbRLZuyR7sB8dWEnc7tsd2jm40IJAUdVgSJZO6B_3fF5SdjnPM7E53Y7ELTIAYUpH1FItFVj2q38VcHP8urie7G3EsDktGh0mGQDJkMCLjs_dvr88D_cPx9ZssAClm53onASMgP84KsxQPc1DQCEXZgBURigEdDk5WQ0Dx8AMuLimICBvusiyBWTNkiEZ5wcQL8XF27c4mu4k7m2-2T0s-qpWwJEV5bvwoH5_NGQ8rQIdJBPsVeUMPs7jIcvHrhUj4Rkw24lgEVLwQJxwdcJPTqTgWA4T442p5Nb92tzfOYsGNk6gZsiKjeLi35RrB1IRQIezAgpREB12jwciWc9U6jCQIWCgZA1XKFYPvxJALOOTjI4f_5RfxQpw595erR3cx2TnbnXvvbLbz1VIci_LAGOjP46trlwfMhQaUFaxpEKoYKr49skwLQnmkA6AbquIB2bJNVcUaRBoyTRkiWQW2YUHNt3UPKdyDPwgHiRopp5kfJXj46iT8t56M2XzjLO_5uRDHovQHaA8Y8nila5rtMSrYEJRFloICe88ID5Pd9Mbh4ccfWibfjj5as8ldsL7SWpjJ4HPpap6bhF5qOJeImFuyVNef5-jwaRWt7BJGchbEbu37Ndbs367w5fU-nhTFxytpspXNzyrLjPXdajNrAno3issQmJ9K56DfPmiT1W38MDJvY_nT3l3e3OC7eeuNvE_6Qf9QNouRRZPuql09XFu2sk4fQXL5sWTTZnt315r6TbN4SO715KG8_03aTLfy1smg-xu6VG0FBFNI1rcrJ9jtPurFzFpUnzfSklx6lK7u6WNnIlcz01CSNH9Z17ub_Ka04OPWT_PPhty5oams7f1KZ77yaH_E68lkMnHdEXA-63zfblbbnfuUQp6vhKIdkNy0-86iaUMYUSlR6i5WzE5tapUkEsk8vGeSKg_kgXw8A8_agB4UuaFeaLa1FgZNlDDTRmSfyi21DBNIKKO4LKKESaOB8lq701A6yu0kNf0qTSIYK_sR25MYWZ7iVYhKfkS8o7Y-GL21zhKzS1iuJrQJSQO9ttYMX_aRp1fqSE0tyYt8_6ivDUavtdUuQYfYi0JAqnwvgxrsK54JrAjBKmC6FJCSYY-bfq2qM08_NJpptQfUtbT2KyrnFvLk3NAMi_lcNaA4l7SB9Vq3UlFnJ34smyiX7SbPUWOjQM_9mPigznMpAHXMc9Db_apSskdernch0WI_UQ3bN2vFRxD5jQ9Sj5stAJWUgaa_1tU6KLfIG1XpPraSkCksDRSietQyYdXsR1LQRbmkDBT1jaYfEw8YUaVXh1DX6SHya2TktZl3imx7RIJdlKuSMpAHttTnzJf6sla1TNNaYLQWsEhcB11bA9BFFapDpKd81SmIsaQP9Lc-_-WUfa5MWqi0SWi1XQRaTWNtoqZyWtukSWTFq6mUgwKFkjqwBuabo60qlklHPqyJ1pqkGu0bIh9kqKedHHSdIjWdZAz0gfqezwc7z4NupIbp3rT1RIadlYZeqmkH5dB1WifxnM3V-ziJF-J86S7nj99qVpTmJcXihbiY3C2nN87GfVv8uVkPVzBrzued1yN1IPOhmTgWE69_chfzy81k8-kb3F9NwMPB0WTv61Pt8bAPyqTgFXvMzfwHbPDNupwvd6vVYvsyoclxOEriw2Gf137S-BXUgUKChsTIJwnLPR6uY06oKchzTCV1oMuvIN2HzWS9djbubrK5dnZunzwb23RN3S1JTLKauElEysYNSCmOReVJ_26-mLnT1aavTPZJ2nOTsyVCI43jyIYtawPgW0BW9vnetjvaRDCmlS4FCH1bnaKe4nhE-t6VTa8Wk-utO13drucLRxyLguRTQLwslRjG3j-oXCV2Y9OqE6SItazAqfD9ZSIiKCk9_BOhTm44y6vVZuq4y5W7nOzm986ZizeTzcxZzpfXrrOcXPZO-hktIr8VWAFQnNOswKjIqJBHSGD8PBZZhamfZLXgZzQFhUBxQjMBRsQjWX3CXcz6veOEheagCM-ded62ZHRAhqdSwyRKbgVEBUk4yiXO0ViIk0TCpOKn19SFnwEjnBa33qyu5gvn2yXgzPns3rCniyP8GyTyBLndLtyps9m5V8eTMsQFGjKWDBGmBRsiIPGHyI8QKDAbIFo8Ke5WG-fFUecDt-JYJCl_Ws2cH2cg_LOAS9w088oEc1K5uvwwXa0_iWMxg3uU5e1RNru7XR9lXpnm4oX4wwmpimjB939wupzszzjxdya4V5UkP8h1IOtWBVXLDpTcr7oEddBTmzgeEXo4ljCc-JI8UIy3HOk7cs1rCG9vAELzGhE5N0OtIYeWGmmnyT6yEls1eoj3VdsqYpZOCIAys3ME2xbKsRkkEO5Tq4o6KUgiiCR1oFnSu-Thxwjm99WCN07AWrcNU7Y9y1faSqlkS9mrsqEeTD2tEvCM8p72jxHsvyny3xT5b4r8J42H_8EeyGayXMwvxbFIAUkiyCXOZOYsrrgIAw8nvnghbuefeS1lUcer6HZ1x2nPbLJzXGe9mvI6pimGoam2zMnhdjfZ3XES8LDafOQUaDmfOotP_chmvuzZC2c8JGAn2fokyd_r1_1A_en9H__rjt_ZlD_q912IrnvqpvUfRs7y3r2ZbH9KTw1jQ1E0iEcGtFVgQtnSbOiblm-OfF-2PNP2IVagb6gjfWTYug8UH6qGraqybJie3S_O2U2fCNjx862P0uzESV2XFbRERUmxNykKysSxKF6IsIwSb07ysmA_QoSekNYhYFgci78LGIWZ8EWUfuDvi_ir8IQjPEw2nE2PhSLEAm4iVmCCsJD5QhFGTOg5bMQEkhVCUAIKSIGxN3gBMS_4DECEiBSYEpAIUZonOMWkAEWUEcHDBYgSzr6FPA7YII23nOW-QPkpDv0qCP8nbDDKqCeAJBH6vROiPgwCYAItSRGlWPBwjomHCYowEwTc5Bktfv0qfCllWcPHX-GL-P9ZWXz5FkxMf1KbGfEkf5WA4HRUUEb8KCjpuczDObvkVvuf92RrmuUg6NulL0d3gAa4eFf4ns5Nxgr-_1by3uwjzmsT59I3Wtk0xCh-epkTVoAkeSEjxcTzZhEDMMEznO8o6Mf47Uoxy8jZvhCQ8mvw4kOpFxdRhS9f3DnxQszK4mXM_toX2BHhBMexLsRjHjzB5_xS8uezK3oh5hT7mC54DnwKntKLn_blzTKfh5bv-9Gv6Cedvh7rJstOu88Kj3v6shoEvm3RIO48eAhD5nl5EgWt3UQ1oKZW29JRSeo7ED0G_8ie4fxpuX03QByLx47Fad7Xr_8MAAD__8jJ_G4=" />
+      <env name="NIX_CC" value="/nix/store/b5mkki8bysygaf7a01jpj88zrxibkrv4-gcc-wrapper-12.2.0" />
+      <env name="mesonFlags" value="" />
+      <env name="dontAddDisableDepTrack" value="1" />
+      <env name="NAME" value="&quot;Smart Moveax&quot;" />
+      <env name="IN_NIX_SHELL" value="impure" />
+      <env name="LIBRARY_PATH" value="$PROJECT_DIR$/.devbox/nix/profile/default/lib:" />
+      <env name="buildPhase" value="{ echo &quot;------------------------------------------------------------&quot;;  echo &quot; WARNING: the existence of this path is not guaranteed.&quot;;  echo &quot; It is an internal implementation detail for pkgs.mkShell.&quot;;  echo &quot;------------------------------------------------------------&quot;;  echo;  # Record all build inputs as runtime dependencies  export;} &gt;&gt; &quot;$out&quot;" />
+      <env name="AR" value="ar" />
+      <env name="AS" value="as" />
+      <env name="system" value="x86_64-linux" />
+      <env name="shell" value="/nix/store/j80wcbm6bb1nsqsgmniq43rg980p27q9-bash-5.2-p15/bin/bash" />
+      <env name="NIX_BINTOOLS" value="/nix/store/0kh9lkqqjpwflxfvb4a1ngxnkcfnlspd-binutils-wrapper-2.40" />
+      <env name="name" value="nix-shell-env" />
+      <env name="DIRENV_WATCHES" value="eJys0M9K7DAUgPF3ybo0aZu_3d_lhdm5EBcn6SnN2PZIcqYOiO8ubi0ogk_wffwe38QFeBGjkAttKF-AS06Z2so5PUORDxgrU9kuha6YuEq4MW3AOMkW96Mk0Yj_NHHeUIyd9dY4q4JuxL97rlzFyOWG781PmXalBKusCxSUUy64HxLWlV4lWuVQ-RCS0SEob_QcB281agCbnPMOEgTTK4tD7LvZR-NnBdrrOVrXz6c_36mh--3fNwwTHpHu7bXSfmpZ50z_h61P8jO4sf1X8KePAAAA__9aEZ4d" />
+      <env name="NIX_LDFLAGS" value="-rpath /nix/store/r0vl8x8rvzl9qc5d2r56n1p7gn2alh9p-nix-shell-env/lib64 -rpath /nix/store/r0vl8x8rvzl9qc5d2r56n1p7gn2alh9p-nix-shell-env/lib " />
+      <env name="NIX_SSL_CERT_FILE" value="/etc/ssl/certs/ca-certificates.crt" />
+      <env name="__structuredAttrs" value="" />
+      <env name="depsBuildTargetPropagated" value="" />
+      <env name="depsHostHost" value="" />
+      <env name="NM" value="nm" />
+      <env name="STRINGS" value="strings" />
+      <env name="NIX_ENFORCE_NO_NATIVE" value="1" />
+      <env name="STRIP" value="strip" />
+      <env name="HOST_PATH" value="/nix/store/13qc0xyjz7rmxnsn2rn1wzk16z2xw2nl-nodejs-20.0.0/bin:/nix/store/arq10xrdh6yw3hgxils68cnjm0yr756a-coreutils-9.1/bin:/nix/store/z3cm9p8lm6fvmlibk1j9sjnkc7d1dvcr-findutils-4.9.0/bin:/nix/store/sl6zlsp2lrxhnxbdyw35f0fcd4v292m7-diffutils-3.9/bin:/nix/store/2zlcqkdihanvpj0awajvg9807icbvgs4-gnused-4.9/bin:/nix/store/4sd4qx367yqczyrwfvr0p7cd0p5357sf-gnugrep-3.7/bin:/nix/store/v2cz8lfk06cp08xppcx8cg4pfknfawpp-gawk-5.2.1/bin:/nix/store/vmnjcdp4zhn3kfl258f6w1fcbcfxfamd-gnutar-1.34/bin:/nix/store/3zb0ycd9vmjk7lhs1smg1n2dr76bvxj9-gzip-1.12/bin:/nix/store/3fknda5iv4vqh44rqifwc5pw6pz108dn-bzip2-1.0.8-bin/bin:/nix/store/03vys33ya5y7a7nkwgzywaazivcwhc4m-gnumake-4.4.1/bin:/nix/store/j80wcbm6bb1nsqsgmniq43rg980p27q9-bash-5.2-p15/bin:/nix/store/nyb1ylh7yziay33syl2m0mw8nxl01dwr-patch-2.7.6/bin:/nix/store/a2176r9fbwn3y6nv9jxn0q0b4mz0gzz1-xz-5.4.2-bin/bin:/nix/store/q8ppgz92hmj684l0bz7mhdm33q1qzz3z-file-5.44/bin" />
+      <env name="NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu" value="1" />
+      <env name="configureFlags" value="" />
+      <env name="cmakeFlags" value="" />
+      <env name="depsTargetTarget" value="" />
+      <env name="propagatedBuildInputs" value="" />
+      <env name="out" value="/nix/store/r0vl8x8rvzl9qc5d2r56n1p7gn2alh9p-nix-shell-env" />
+      <env name="DIRENV_DIR" value="-$PROJECT_DIR$" />
+      <env name="builder" value="/nix/store/j80wcbm6bb1nsqsgmniq43rg980p27q9-bash-5.2-p15/bin/bash" />
+      <env name="CONFIG_SHELL" value="/nix/store/j80wcbm6bb1nsqsgmniq43rg980p27q9-bash-5.2-p15/bin/bash" />
+      <env name="SOURCE_DATE_EPOCH" value="315532800" />
+      <env name="NODE_PATH" value="/nix/store/13qc0xyjz7rmxnsn2rn1wzk16z2xw2nl-nodejs-20.0.0/lib/node_modules" />
+      <env name="phases" value="buildPhase" />
+      <env name="CC" value="gcc" />
+      <env name="NIX_CFLAGS_COMPILE" value=" -frandom-seed=r0vl8x8rvz -isystem /nix/store/13qc0xyjz7rmxnsn2rn1wzk16z2xw2nl-nodejs-20.0.0/include -isystem /nix/store/13qc0xyjz7rmxnsn2rn1wzk16z2xw2nl-nodejs-20.0.0/include" />
+      <env name="preferLocalBuild" value="1" />
+      <env name="depsBuildBuildPropagated" value="" />
+      <env name="LAUNCHER_VERSION" value="0.2.0" />
+      <env name="propagatedNativeBuildInputs" value="" />
+      <env name="NIX_STORE" value="/nix/store" />
+      <env name="LD" value="ld" />
+      <env name="NIX_HARDENING_ENABLE" value="fortify stackprotector pic strictoverflow format relro bindnow" />
+      <env name="NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu" value="1" />
+      <env name="depsBuildBuild" value="" />
+      <env name="DEVBOX_LATEST_VERSION" value="0.5.4" />
+      <env name="NIX_BUILD_CORES" value="8" />
+    </envs>
+    <EXTENSION ID="com.fapiko.jetbrains.plugins.better_direnv.runconfigs.NodeRunConfiguration">
+      <option name="DIRENV_ENABLED" value="true" />
+      <option name="DIRENV_TRUSTED" value="true" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
