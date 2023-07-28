@@ -4,7 +4,7 @@
 current_dir="$(pwd)"
 
 # Set the path to the direnv.toml file
-toml_file="${HOME}/.config/direnv/direnv.toml"
+toml_file="${HOME}/.config/direnv/config.toml"
 
 # Create the direnv directory if it doesn't exist
 mkdir -p "$(dirname "$toml_file")"
