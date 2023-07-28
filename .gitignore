@@ -130,4 +130,5 @@ dist
 .pnp.*
 
 # Custom
-.devbox
+.devbox/
+.idea/
