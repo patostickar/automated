@@ -34,6 +34,8 @@ make() {
 }
 
 refresh() {
+  eval $(op signin)
+
   # Function to process .env.example and create/update .env file
   process_env_example() {
     local env_example_file="$1"
@@ -49,7 +51,7 @@ refresh() {
       variable_value=$(echo "$line" | cut -d '=' -f 2-)
 
       # Update the value of the corresponding variable in the .env file
-      sed -i "s/^$variable_name=.*/$variable_name=$variable_value/" "$env_file"
+      sed -i 's%^'"$variable_name"'.*%'"$variable_name=$variable_value"'%' "$env_file"
     done < <(op run --env-file="$env_example_file" --no-masking -- printenv)
   }
 
