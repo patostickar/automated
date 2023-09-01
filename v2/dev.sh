@@ -4,7 +4,6 @@
 RESET='\e[0m'
 BOLD_TEXT='\e[1m'
 COLOR_GREEN='\e[32m'
-COLOR_RED='\e[31m'
 COLOR_MOVEAX='\e[34m'
 
  echo -e "${BOLD_TEXT}Welcome to ${COLOR_MOVEAX}Moveax${RESET}${BOLD_TEXT} Software Factory${RESET}"
