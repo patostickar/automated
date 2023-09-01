@@ -1,10 +1,58 @@
 #!/bin/bash
 
-get_help() {
-  echo "setup: install all the required dependencies in order to work with the dev environment"
-  echo "make-env: to initialize a project as a dev environment"
-  echo "refresh: to refresh your environment variables from the .env.example files"
-  echo "help: to show this help"
+# Define color escape codes
+RESET='\e[0m'
+BOLD_TEXT='\e[1m'
+COLOR_GREEN='\e[32m'
+COLOR_RED='\e[31m'
+COLOR_MOVEAX='\e[34m'
+
+ echo -e "${BOLD_TEXT}Welcome to ${COLOR_MOVEAX}Moveax${RESET}${BOLD_TEXT} Software Factory${RESET}"
+
+declare -A options=(
+  ["setup"]="Install Devbox and Direnv"
+  ["init"]="Initialize a project as a dev environment"
+  ["install"]="Install project dev dependencies"
+  ["refresh"]="Refresh environment variables from .env.example files"
+  ["help"]="Show this help"
+  ["exit"]="Exit"
+)
+
+option_order=("setup" "init" "install" "refresh" "help" "exit")
+
+display_menu() {
+  echo "Please choose from one of the following options:"
+  for option in "${option_order[@]}"; do
+    printf "${BOLD_TEXT}${COLOR_GREEN}%-8s->${RESET} %s\n" "$option" "${options[$option]}"
+  done
+}
+
+execute_option() {
+  echo
+  case $1 in
+  "setup")
+    setup
+    ;;
+  "init")
+    init
+    ;;
+  "install")
+    install
+    ;;
+  "refresh")
+    refresh
+    ;;
+  "help")
+    display_menu
+    ;;
+  "exit")
+    echo "Exiting..."
+    exit 0
+    ;;
+  *)
+    echo "Invalid option: '$1'"
+    ;;
+  esac
 }
 
 setup() {
@@ -13,13 +61,14 @@ setup() {
   check_or_install_devbox
   check_or_install_direnv
 
-  echo "All the dependencies are installed!"
+  echo "All the required packages are installed!"
 }
 
-make() {
+init() {
+  echo "Initializing project as a dev environment..."
   if [ -f "./devbox.json" ]; then
-      echo "Skipping make: the project is already a devbox environment"
-      return
+    echo "Skipping make: the project is already a devbox environment"
+    return
   fi
 
   check_or_install_devbox
@@ -33,8 +82,17 @@ make() {
   refresh
 }
 
+install() {
+  echo "Installing project devbox packages"
+  devbox install
+}
+
 refresh() {
+  echo "Refreshing environment variables from .env.example files..."
   eval $(op signin)
+
+  # Flag to track if any .env.example files were found
+  found_env_examples=false
 
   # Function to process .env.example and create/update .env file
   process_env_example() {
@@ -55,18 +113,27 @@ refresh() {
     done < <(op run --env-file="$env_example_file" --no-masking -- printenv)
   }
 
-
   # Find all .env.example files in the current directory and its subdirectories
   while IFS= read -r -d '' env_example_file; do
+    found_env_examples=true
     process_env_example "$env_example_file"
   done < <(find . -type f -name ".env.example" -print0)
+
+  # Check if any .env.example files were found and processed
+  if [ "$found_env_examples" = true ]; then
+    echo "Environment variables refreshed from .env.example files."
+  else
+    echo "No .env.example files were found."
+  fi
 }
 
 check_or_install_devbox() {
-    if ! devbox >/dev/null 2>&1; then
-      echo "Devbox is currently not installed. Installing it.."
-      curl -fsSL https://get.jetpack.io/devbox | bash
-    fi
+  if ! devbox >/dev/null 2>&1; then
+    echo "Devbox is currently not installed. Installing it.."
+    curl -fsSL https://get.jetpack.io/devbox | bash
+  else
+    echo "Devbox is already installed."
+  fi
 }
 
 check_or_install_direnv() {
@@ -77,30 +144,35 @@ check_or_install_direnv() {
     current_shell=$(basename "$SHELL")
 
     case "$current_shell" in
-        "bash")
-            echo "Hooking direnv into bash"
-            echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
-            ;;
-        "zsh")
-            echo "Hooking direnv into zsh"
-            echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
-            ;;
-        "fish")
-            echo 'direnv hook fish | source' >> ~/.config/fish/config.fish
-            ;;
-        *)
-            echo "Failed to hook direnv into shell: Unknown shell $current_shell"
-            exit 1
-            ;;
+    "bash")
+      echo "Hooking direnv into bash"
+      echo 'eval "$(direnv hook bash)"' >>~/.bashrc
+      ;;
+    "zsh")
+      echo "Hooking direnv into zsh"
+      echo 'eval "$(direnv hook zsh)"' >>~/.zshrc
+      ;;
+    "fish")
+      echo 'direnv hook fish | source' >>~/.config/fish/config.fish
+      ;;
+    *)
+      echo "Failed to hook direnv into shell: Unknown shell $current_shell"
+      exit 1
+      ;;
     esac
+  else
+    echo "Direnv is already installed."
   fi
 }
 
 create_envrc_files() {
   # Function to create the file in the subfolder
+  echo "Creating '.envrc' files in project folders"
+
   create() {
-      local subfolder="$1"
-      local file_content="# Automatically sets up your devbox environment whenever you cd into this
+
+    local subfolder="$1"
+    local file_content="# Automatically sets up your devbox environment whenever you cd into this
   # directory via our direnv integration:
 
   eval \"\$(devbox generate direnv --print-envrc)\"
@@ -110,23 +182,27 @@ create_envrc_files() {
   dotenv
   "
 
-      echo "$file_content" > "$subfolder/.envrc"
-      echo "Created '.envrc' in '$subfolder'"
+    echo "$file_content" >"$subfolder/.envrc"
+    echo "Created '.envrc' in '$subfolder'"
   }
 
   # Find all subfolders containing .env.example and create the .envrc file
   find . -type f -name ".env.example" -printf '%h\n' | while read -r subfolder; do
-      create "$subfolder"
+    create "$subfolder"
   done
 
   # Create .envrc in the current folder
   current_folder="$(pwd)"
   create "$current_folder"
+
+  echo "'.envrc' files created"
 }
 
 whitelist() {
   # Get the absolute path of the current directory
   current_dir="$(pwd)"
+
+  echo "Adding $current_dir to direnv whitelist"
 
   # Set the path to the direnv.toml file
   toml_file="${HOME}/.config/direnv/config.toml"
@@ -148,32 +224,24 @@ whitelist() {
       sed -i "s|\(prefix = \[.*\)\]|\\1, \"$current_dir\"\\]|" "$toml_file"
     else
       # Add the new prefix section
-      echo "prefix = [ \"$current_dir\" ]" >> "$toml_file"
+      echo "prefix = [ \"$current_dir\" ]" >>"$toml_file"
     fi
   else
     # Create the file with the new prefix
-    echo "[whitelist]" >> "$toml_file"
-    echo "prefix = [ \"$current_dir\" ]" >> "$toml_file"
+    echo "[whitelist]" >>"$toml_file"
+    echo "prefix = [ \"$current_dir\" ]" >>"$toml_file"
   fi
 
   echo "direnv.toml file updated at ${toml_file}"
 }
 
-# Check the first argument to determine which command to run
-case "$1" in
-    "setup")
-        setup
-        ;;
-    "make-env")
-        make
-        ;;
-    "refresh")
-        refresh
-        ;;
-    "help")
-        get_help
-        ;;
-    *)
-        echo "Unknown command: '$1'. You can type 'dev help' to read all the available commands"
-        ;;
-esac
+main_loop() {
+  while true; do
+    display_menu
+    read -p "Option: " choice
+    execute_option "$choice"
+    echo
+  done
+}
+
+main_loop
